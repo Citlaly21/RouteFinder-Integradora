@@ -1,0 +1,67 @@
+.container{
+  background-image: url("registro-_Mesa\ de\ trabajo\ 1.jpg") ;
+  background-position: center;
+  image-rendering: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: fit-content;
+  padding: 65px;
+  margin: auto;
+}
+
+
+.contdos{
+    padding: 85px;
+    font-size:large;
+    background-position-x:center;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    left: -285px;
+    top: -35px;
+    font-family:'Montserrat light';
+} 
+
+
+input{
+    background-color: white;
+    border-width: 0px 0px 1px 0px;
+    padding: 5px;
+    display: flex;
+    font-size: medium;
+}
+
+.stylebuttom{
+  padding: 10px 90px;
+  font-size: 16px;
+  background-color: #023246;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor:pointer;
+}
+.espacio1{
+  padding: 15px;
+
+}
+
+
+.login{
+    display: flex;
+    justify-content: center;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.checkbox-custom {
+  transform: scale(1.1);
+}
+

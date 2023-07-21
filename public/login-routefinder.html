@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Inicio de Sesión</title>
+    <link rel="web icon" type="png" href="https://o.remove.bg/downloads/8bd67c8f-64f0-46db-8ccd-269eb80814a6/logo-removebg-preview.png">
+    <link rel="stylesheet" type="text/css" href="indexrf.css">
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyDRplYQcLl5p6G1fW4IBAwbWgYKMnri9eM",
+        authDomain: "route-finder-75a0b.firebaseapp.com",
+        projectId: "route-finder-75a0b",
+      };
+      firebase.initializeApp(firebaseConfig);
+      </script>
+    <script> 
+      function iniciarSesion(event) {
+  event.preventDefault();
+
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+
+  console.log("Iniciando sesión con email:", email);
+
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(function(userCredential) {
+      console.log("Usuario autenticado:", userCredential.user);
+    })
+    .catch(function(error) {
+      console.error("Error al iniciar sesión:", error);
+    });
+}
+    </script>
+  </head>
+  <body class="container">
+    <div class="contdos">
+      <h2><b><center><font color="287094">Inicia Sesión</font></center></b></h2><br>
+      <form onsubmit= "return iniciarSesion(event)">
+        <label for=""></label>
+        <input type="email" id="email" placeholder="Correo electrónico" class="espacio1"> <br>
+        <br>
+        <input placeholder="Contraseña" type="password" name="password" id="password" class="espacio1">
+        <br>
+        <br>
+        <label class="checkbox-label">
+          <input type="checkbox" class="checkbox-custom">
+          <font color="023246">Recordarme</font>
+        </label>
+        <br>
+        <br>
+        <div class="login">
+          <button type="submit" name="login" btn-lg class="stylebuttom">Entrar</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+.container{
+    background-image: url("/images/comentarios_Mesa\ de\ trabajo\ 1.jpg") ;
+    background-position: center;
+    image-rendering: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: fit-content;
+    padding: 65px;
+    margin: auto;
+}
+
+
+.contdos{
+    padding: 85px;
+    font-size:large;
+    background-position-x:center;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    left: 10px;
+    top: -35px;
+    font-family:'Montserrat light';
+    position: relative;
+    top: -150px;
+} 
+
+.letter{
+    position: relative;
+    right: 30px;
+}
+
+.comment-section {
+    margin-bottom: 10px;
+    font-size: medium;
+    font-family: 'Montserrat light';
+}
+
+input{
+    background-color: white;
+    border-width: 0px 0px 1px 0px;
+    padding: 5px;
+    position: relative;
+    font-size: medium;
+    font-family: 'Montserrat light';
+}
+
+.comment {
+    border: 1px solid transparent;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+}
+.comment h3 {
+    margin: 0;
+}
+.comment p {
+    margin: 5px;
+}

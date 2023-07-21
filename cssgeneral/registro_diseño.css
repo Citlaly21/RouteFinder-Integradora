@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    align-items: center;
+    display: flex;  
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    padding: 65px;
+    justify-content: space-evenly;
+}
+
+input{
+    background-color: white;
+    border-width: 0px 0px 1px 0px;
+    padding: 5px;
+    display: flex;
+    width: 100%;
+    font-size: medium;
+    position: relative;
+}
+
+.espacio1{
+    padding: 15px;
+}
+
+
+.login{
+    display: flex;
+    justify-content: center;
+}
+
+.checkbox-label {
+    display: flex;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.checkbox-custom {
+    transform: scale(1.1);
+    width: min-content;
+}
+.stylebuttom{
+    padding: 10px 90px;
+    font-size: 16px;
+    background-color: #023246;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor:pointer;
+    position: relative;
+}
+
+.right {
+    background-image: url("registro-agregar.jpg");
+    background-position: center;
+    image-rendering: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 45%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
