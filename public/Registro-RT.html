@@ -5,10 +5,11 @@
     <title>registro</title>
     <link rel="web icon " type="png"  href="https://o.remove.bg/downloads/8bd67c8f-64f0-46db-8ccd-269eb80814a6/logo-removebg-preview.png">
     <link rel="stylesheet" type="text/css" href="prueba2.css">
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
-
+    <script src="/public/guardar.js"></script>
     <script>
     
       var firebaseConfig = {
@@ -18,6 +19,7 @@
 
       };
       firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
 
       function registrarUsuario(event) {
         event.preventDefault(); 
@@ -66,13 +68,14 @@
         <br>
         <div>
           <div class="login">
-            <button type="submit" name="login" btn-lg class="stylebuttom">
-            <a href="MapsRoute.html" class="link"> Entrar </a>
-            </button>
           </div>
-        </div>
-      </form>   
+        
+      </form>
+      <button name="login" btn-lg class="stylebuttom" onclick="guardar()">
+        <a href="MapsRoute.html" class="link"> Entrar </a>
+        </button>   
     </div>
+  </div>
   </body>
 </html>
 
