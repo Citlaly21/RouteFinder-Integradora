@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Route Finder</title>
     <link rel="stylesheet" type="text/css" href="estilos.css">
-    <link rel="stylesheet" type="text/css" href="css/fontello.css">
-    <link rel="Icon" href="https://drive.google.com/file/d/19qSNP0xd8J5kB-euV5AQT4-eoBU7VUsQ/view?usp=sharing">
-    
+    <link rel="stylesheet" type="text/css" href="fontello.css">
+    <link rel="Icon" href="logo-removebg-preview (1).png">
+    <script src="Busqueda.php"></script>
 </head> 
 <body style=" background-color: #023246;">
     
@@ -33,7 +33,7 @@
             <div class="cont-menu">
                 <nav>
                     <a href="#" <span class="icon-user"></span> Mi perfil</a>
-                    <a href="file:///C:/Users/cruzl/OneDrive/Documentos/3er%20Cuatrimestre/Aplicaciones%20web/HTML/Route%20Finder.html" <span class="icon-home"></span> Inicio</a>
+                    <a href="./index.html" <span class="icon-home"></span> Inicio</a>
                     <a href="#" <span class="icon-cog"></span> Configuración</a>
                     <a href="#" <span class="icon-info-circled"></span> Nosotros</a>
                     <a href="#" <span class="icon-help-circled"></span> Ayuda</a>
@@ -44,21 +44,50 @@
         </div>
     </div>
 
-    <iframe src="https://www.google.com/maps/d/embed?mid=1cYjvQEBTf3l3lJUfC5rqsUKvCPMoAzk&ehbc=2E312F" width="1000" height="800"></iframe>
-
+    <div class="map-container">
+    <iframe src="https://www.google.com/maps/d/embed?mid=1aRY6IAXcA3quC_3DkJPZ6hwJI3xVMtk&ehbc=2E312F" width="100%" height="300%" ></iframe>
+    </div>
 
 
 
     <div class="containerBuscador">
-        <input type="text" class="search-bar" placeholder="¿Donde estoy?">
+        <input type="text" class="search-bar" placeholder="¿Donde estoy?" id="lugar_inicio">
     </div>
     
     <div class="containerBuscador2">
-        <input type="text" class="search-bar" placeholder="¿A donde voy?">
-        <button type="submit" class="search-button">Buscar</button>
+        <input type="text" class="search-bar" placeholder="¿A donde voy?" id="lugar_final">
+        <button type="button" class="search-button" onclick="buscarRutas()">Buscar</button>
     </div>
 
+    <div id="resultados">
 
+    </div>
+
+    <script>
+        function buscarRutas() {
+          // Obtener los valores
+            var lugar_inicio = document.getElementById('lugar_inicio').value;
+            var lugar_final = document.getElementById('lugar_final').value;
+        
+          // Crear objeto XMLHttpRequest
+            var xhr = new XMLHttpRequest();
+        
+          // Configurar el método POST y la URL del archivo busqueda.php
+            xhr.open("POST", "Busqueda.php", true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        
+          // Definir la función para manejar la respuesta del servidor
+            xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+              // Actualizar el div "resultados"
+                document.getElementById("resultados").innerHTML = xhr.responseText;
+            }
+        };
+        
+          // Enviar los datos
+            xhr.send("lugar_inicio=" + lugar_inicio + "&lugar_final=" + lugar_final);
+        }
+        </script>
     
 
 </body>

@@ -6,9 +6,9 @@ function guardar(){
     })
     .then((docRef) => {
         alert ("Registro Exitoso");
+        window.location.href="MapsRoute.html"
     })
     .catch((error) => {
         alert ("Error en el registro");
     });
-    //Holiii
 }
