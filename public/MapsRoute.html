@@ -45,18 +45,23 @@
     </div>
 
     <div class="map-container">
-    <iframe src="https://www.google.com/maps/d/embed?mid=1aRY6IAXcA3quC_3DkJPZ6hwJI3xVMtk&ehbc=2E312F" width="100%" height="300%" ></iframe>
+        <!--<iframe src="https://www.google.com/maps/d/embed?mid=1aRY6IAXcA3quC_3DkJPZ6hwJI3xVMtk&ehbc=2E312F" 
+            width="100%" height="300%"
+            frameborder="1" 
+            title="Rutas de Tehuacán Sección 1"
+            allowfullscreen
+            scrolling
+            sandbox="allow-same-origin allow-scripts">
+        </iframe>-->
+        <iframe src="https://www.google.com/maps/d/u/2/embed?mid=1aRY6IAXcA3quC_3DkJPZ6hwJI3xVMtk&ehbc=2E312F" 
+        width="100%" height="250%" title="Mi Mapa Personalizado" frameborder="3" 
+        allowfullscreen sandbox="allow-same-origin allow-scripts"></iframe>
+
     </div>
 
 
-
-    <div class="containerBuscador">
-        <input type="text" class="search-bar" placeholder="¿Donde estoy?" id="lugar_inicio">
-    </div>
-    
-    <div class="containerBuscador2">
-        <input type="text" class="search-bar" placeholder="¿A donde voy?" id="lugar_final">
-        <button type="button" class="search-button" onclick="buscarRutas()">Buscar</button>
+    <div class="mapa2">
+        <a href="./mapsroute2.html" class="search-button" onclick="buscarRutas()">Siguiente mapa</a>
     </div>
 
     <div id="resultados">

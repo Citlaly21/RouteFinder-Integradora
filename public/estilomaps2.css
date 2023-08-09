@@ -149,7 +149,7 @@
 .search-button {
       position: absolute;
       top: 11px; /* Ajusta el valor según la cantidad que desees mover el botón hacia abajo */
-      left: 1100px; /* Ajusta el valor según la cantidad que desees mover el botón hacia el lado izquierdo */
+      left: 900px; /* Ajusta el valor según la cantidad que desees mover el botón hacia el lado izquierdo */
       padding: 13px 10px;
       font-size: 16px;
       background-color: #d4d4ce;
